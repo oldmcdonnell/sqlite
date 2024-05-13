@@ -134,7 +134,71 @@
 -- ('Calculus'),
 -- ('SQL'),
 -- ('Cloud computer security');
+-- test
+
+-- SELECT * FROM Instructors;
+-- SELECT * FROM courses;
+
+-- UPDATE 
+-- courses
+-- SET
+-- instructor_id = 
+-- CASE 
+-- when name IS 'SQL' OR name IS 'Cloud computer security'
+-- THEN 3
+-- WHEN name IS 'Into to python'
+-- THEN 1
+-- END; 
 
 
-SELECT * FROM Instructors;
-SELECT * FROM courses;
+-- SELECT
+-- courses.NAME AS course,
+-- Instructors.name AS instructor
+-- FROM
+-- courses JOIN Instructors
+-- ON 
+-- courses.instructor_id = Instructors.id
+
+-- INSERT INTO Instructors (id, name)
+-- vALUES
+-- (1, 'John Maycombe'),  
+-- (2, 'Peter sharp'),
+-- (3, 'Francis Bacon'),
+-- (4, 'Dwght howard');
+
+
+-- -- many to many 
+
+
+-- SELECT * from Students
+
+-- -- CREATE TABLE 
+-- --  Student_courses(
+-- --  student_id INTEGER,
+-- --  course_id INTEGER,
+-- --  FOREIGN KEY (student_id) REFERENCES Students(id),
+-- --  FOREIGN KEY (course_id) REFERENCES courses(id),
+-- --  PRIMARY KEY (student_id, course_id)
+-- --  );
+
+-- SELECT * FROM Student_courses;
+-- .tables
+
+-- INSERT INTO Student_courses(student_id, course_id)
+-- VALUES
+-- (1, 1),
+-- (1, 3),
+-- (4, 2),
+-- (2, 2),
+-- (6, 3); 
+
+-- SELECT 
+-- Students.name AS Student,
+-- courses.name AS Course
+-- FROM 
+-- Students JOIN Student_courses
+-- ON
+-- Students.id = Student_courses.student_id
+-- join courses
+-- on courses.id = Student_courses.course_id
+
